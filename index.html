@@ -6,7 +6,28 @@
     <title>Kerim Bueno</title>
 </head>
 <link rel="stylesheet" href="https://use.typekit.net/mfb6wfe.css">
+
 <style>
+    {
+  	"@med": {
+		"prefix": "@med",
+		"body": [
+			"@media only screen and (max-width: $1) {\n\t$2{\n\t\t$3\n\t}\n}",
+		],
+		"description": "Add media query. Use Tab key 3 times (1st = max-width, 2nd = selector, 3rd = properties)"
+	}
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+}
+.Kerim { grid-area: 2 / 3 / 5 / 4; }
+.Logo { grid-area: 2 / 2 / 3 / 3; }
+.Bio { grid-area: 3 / 2 / 4 / 4; }
+.Nav { grid-area: 2 / 4 / 4 / 5; }
+
     body {
         background-color: #171717;
         font-family: "FatFrank";
@@ -41,11 +62,23 @@
     hr {
         background-color: #D55672;
     }
-    
+    img.resize: {
+        max-width: 50%;
+        max-heght: 50%;
+    }
+
 </style>
+
+<div class="grid-container">
+    <div class="Kerim"></div>
+    <div class="Logo"></div>
+    <div class="Bio"></div>
+    <div class="Nav"></div>
+  </div>
+
 <body>
     <div>
-        <img src="C:\Users\17604\OneDrive\Documents\GitHub\hw18\images\KERIM.png" >
+        <img class="Logo" src="C:\Users\17604\OneDrive\Documents\GitHub\hw18\images\KERIM.png" >
     </div>
     <nav>
         <ul>
@@ -59,7 +92,7 @@
         <header>KERIM BUENO</header>
         <p>I'm a Portland based UX & UI designer. I enjoy <br>creating delightful user-centric experiences.</p>
         <hr>
-        <img id="smaller-image" src="C:\Users\17604\OneDrive\Documents\GitHub\hw18\images\kerimm.jpg" width:1000px; height: 1247px;>
+        <img class="resize" src="C:\Users\17604\OneDrive\Documents\GitHub\hw18\images\kerimm.jpg" width: 1000px; height: 1247px;>
     </div>
     <div>
         <ul>
